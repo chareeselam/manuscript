@@ -15,18 +15,6 @@ h1 {
     font-weight: 800;
 }
 
-h1:nth-child(1){
-    color:#EC0B43;
-}
-
-h1:nth-child(2){
-    color:#FFBC42;
-}
-
-h1:nth-child(3){
-    color:#0353A4;
-}
-
 h2 {
     font-family:Gabarito;
     font-size:2rem;
@@ -35,5 +23,27 @@ h2 {
 h3 {
     font-family: Gabarito;
     font-size:2rem;
-    font-weight:400;
+    font-weight:600;
+}
+
+.red{
+    color:#EC0B43
+}
+
+.yellow{
+    color:#FFBC42
+}
+
+.blue{
+    color:#0353A4
+}
+
+section p:first-of-type::first-letter {
+	font-family:Gabarito;
+    font-size:2rem;
+    font-weight:600;
+}
+
+a:link{
+    text-decoration: underline;
 }

@@ -4,7 +4,8 @@
 p {
     font-family: Roboto;
     color: #262626;
-    font-size:400;
+    font-size:800;
+    line-height: 160%;
 }
 
 h1 {
@@ -38,7 +39,7 @@ h3 {
     color:#0353A4
 }
 
-section p:first-of-type::first-letter {
+section>p:first-of-type::first-letter {
 	font-family:Gabarito;
     font-size:2rem;
     font-weight:600;

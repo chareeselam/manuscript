@@ -48,3 +48,21 @@ section>p:first-of-type::first-letter {
 a:link{
     text-decoration: underline;
 }
+
+.outline-red{
+    color:white;
+    text-shadow: -1px -1px 0 #EC0B43, 1px -1px 0 #EC0B43, -1px 1px 0 #EC0B43, 1px 1px 0 #EC0B43;
+}
+/* Got this from MDN */
+
+.outline-yellow{
+    color:white;
+    text-shadow: -1px -1px 0 #FFBC42, 1px -1px 0 #FFBC42, -1px 1px 0 #FFBC42, 1px 1px 0 #FFBC42;
+}
+/* Got this from MDN */
+
+.outline-blue{
+    color:white;
+    text-shadow: -1px -1px 0 #0353A4, 1px -1px 0 #0353A4, -1px 1px 0 #0353A4, 1px 1px 0 #0353A4;
+}
+/* Got this from MDN */

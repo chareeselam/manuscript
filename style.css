@@ -1,19 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-body {
-    color:brown;
-    font-family: Roboto, sans-serif;
-    padding: 3rem;
+p {
+    font-family: Roboto;
+    color: #262626;
+    font-size:400;
 }
 
 h1 {
-    font-family:Gabarito, sans-serif;
-    color:blue;
-    font-size: 4rem;
+    font-family: Gabarito;
+    color:#EC0B43;
+    font-size: 12rem;
+    text-transform: uppercase;
+    font-weight: 800;
 }
 
-.subheading {
-    color:orange;
-    font-size: 2rem;
+h1:nth-child(1){
+    color:#EC0B43;
+}
+
+h1:nth-child(2){
+    color:#FFBC42;
+}
+
+h1:nth-child(3){
+    color:#0353A4;
+}
+
+h2 {
+    font-family:Gabarito;
+    font-size:2rem;
+}
+
+h3 {
+    font-family: Gabarito;
+    font-size:2rem;
+    font-weight:400;
 }

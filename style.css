@@ -51,18 +51,21 @@ a:link{
 
 .outline-red{
     color:white;
+    letter-spacing: 0.05em;
     text-shadow: -1px -1px 0 #EC0B43, 1px -1px 0 #EC0B43, -1px 1px 0 #EC0B43, 1px 1px 0 #EC0B43;
 }
 /* Got this from MDN */
 
 .outline-yellow{
     color:white;
+    letter-spacing: 0.05em;
     text-shadow: -1px -1px 0 #FFBC42, 1px -1px 0 #FFBC42, -1px 1px 0 #FFBC42, 1px 1px 0 #FFBC42;
 }
 /* Got this from MDN */
 
 .outline-blue{
     color:white;
+    letter-spacing: 0.05em;
     text-shadow: -1px -1px 0 #0353A4, 1px -1px 0 #0353A4, -1px 1px 0 #0353A4, 1px 1px 0 #0353A4;
 }
 /* Got this from MDN */

@@ -39,6 +39,10 @@ h3 {
     color:#0353A4
 }
 
+.white{
+    color:#FFFFFF
+}
+
 section>p:first-of-type::first-letter {
 	font-family:Gabarito;
     font-size:2rem;
@@ -51,14 +55,30 @@ a:link{
 
 .heading-red{
     color:#EC0B43;
+    font-family:Gabarito;
+    font-size:2rem;
+    font-weight:600;
 }
 
 .heading-yellow{
     color:#FFBC42;
+    font-family:Gabarito;
+    font-size:2rem;
+    font-weight:600;
 }
 
 .heading-blue{
-    color:#0353a4;
+    color:#0353A4;
+    font-family:Gabarito;
+    font-size:2rem;
+    font-weight:600;
+}
+
+.heading-dark-blue{
+    color:#3699FC;
+    font-family:Gabarito;
+    font-size:2rem;
+    font-weight:600;
 }
 
 .outline-red{
@@ -81,3 +101,7 @@ a:link{
     text-shadow: -1px -1px 0 #0353A4, 1px -1px 0 #0353A4, -1px 1px 0 #0353A4, 1px 1px 0 #0353A4;
 }
 /* Got this from MDN */
+
+.black{
+    background-color:black
+}

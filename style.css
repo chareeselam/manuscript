@@ -4,13 +4,13 @@
 p {
     font-family: Roboto;
     color: #262626;
-    font-size:800;
-    line-height: 160%;
+    font-size:1rem;
+    line-height: 180%;
+    font-weight:350;
 }
 
 h1 {
     font-family: Gabarito;
-    color:#EC0B43;
     font-size: 12rem;
     text-transform: uppercase;
     font-weight: 800;
@@ -47,6 +47,18 @@ section>p:first-of-type::first-letter {
 
 a:link{
     text-decoration: underline;
+}
+
+.heading-red{
+    color:#EC0B43;
+}
+
+.heading-yellow{
+    color:#FFBC42;
+}
+
+.heading-blue{
+    color:#0353a4;
 }
 
 .outline-red{

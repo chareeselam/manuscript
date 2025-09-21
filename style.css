@@ -1,32 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-p {
+p{
     font-family: Roboto;
     color: #262626;
-    font-size:1rem;
+    font-size: 1rem;
     line-height: 180%;
-    font-weight:350;
+    font-weight: 400;
 }
 
-h1 {
+h1{
     font-family: Gabarito;
     font-size: 12rem;
     text-transform: uppercase;
     font-weight: 800;
 }
+.h1-red{
+    color:#EC0B43;
+    font-family: Gabarito;
+    font-size: 12rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding-left: 1.5rem;
+    border-left: 20px solid #EC0B43;
+}
 
-h2 {
+.h1-yellow{
+    color:#FFBC42;
+    font-family: Gabarito;
+    font-size: 12rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding-left: 1.5rem;
+    border-left: 20px solid #FFBC42;
+}
+
+.h1-blue{
+    color:#0353A4;
+    font-family: Gabarito;
+    font-size: 12rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding-left: 1.5rem;
+    border-left: 20px solid #0353A4;
+}
+
+h2{
     font-family:Gabarito;
     font-size:2rem;
 }
 
-h3 {
+h3{
     font-family: Gabarito;
-    font-size:2rem;
-    font-weight:600;
+    font-size:2.5rem;
+    font-weight:800;
 }
 
+.bold-text {
+    font-family: Roboto;
+    color: #262626;
+    font-size: 1rem;  
+    font-weight: 700;
+}
+
+.italicize-text {
+    font-family: Roboto;
+    font-style: italic;
+    line-height: 180%;
+    font-weight: 400;
+}
 .red{
     color:#EC0B43
 }
@@ -102,6 +144,47 @@ a:link{
 }
 /* Got this from MDN */
 
-.black{
-    background-color:black
+.blockquote-red{
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 600;
+    margin: 2rem;
+    padding-left: 1.5rem;
+    border-left: 6px solid #EC0B43;
 }
+
+.blockquote-blue{
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 600;
+    margin: 2rem;
+    padding-left: 1.5rem;
+    border-left: 6px solid #0353A4;
+}
+
+/*Following content is me experimenting and learning from Type 1 2324 Github page */
+.black{
+    background-color:black;
+}
+
+header{
+    margin-top: 80px;
+    margin-bottom: 80px; 
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+section:not(:first-child){ 
+    margin-top: 80px;
+    margin-bottom: 80px; 
+    padding-left: 100px;
+    padding-right: 150px;
+}
+
+section:first-child{ 
+    margin-top: 80px; 
+    margin-bottom: 80px; 
+    padding-left: 100px;
+    padding-right: 150px;
+}
+

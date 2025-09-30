@@ -41,6 +41,11 @@ html{
     transform: scale(1.2);  
 }
 
+.top:active{
+    background: var(--yellow);
+    color:var(--text);
+}
+
 p{
     font-family:var(--font-sans);
     color: #262626;

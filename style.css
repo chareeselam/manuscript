@@ -15,34 +15,58 @@
     --gutter-r:4rem;
 }
 
-a:any-link{
-    color: inherit; 
-    text-decoration: underline;
+html{
+    scroll-behavior: smooth;
+}
+
+.top{
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    background-color: var(--blue);
+    bottom: 40px;
+    right: 40px;
+    z-index: 100;
+    border-radius: 100%;
+}
+
+.top:hover{
+    background: var(--red);
+    transform: scale(1.2);  
 }
 
 p{
     font-family:var(--font-sans);
     color: #262626;
-    font-size: 1rem;
-    line-height: 1.8;
+    font-size: 1.2rem;
+    line-height: 2.2;
     font-weight: 400;
     padding-left: 50%;
-    margin-bottom: 1.5rem;
+    margin-block: 3rem;
 }
 
 h1{
     font-family:var(--font-display);
-    font-size: 9rem;
+    font-size: 10rem;
     text-transform: uppercase;
     font-weight: 900;
     line-height: 1;
 }
 
+/* In my previous version, I did what I did for my blockquotes: each word in "Everyday Color Theory" had it's own left border. 
+
+However, the borders were overlapping and bugged me because they weren't equal lengths. I used ChatGPT to see how I could create one singular line and divide it into 3 colors. */
 .stacked-title{
     display:inline-flex;
     flex-direction:column;
     align-items:flex-start;
-    padding-left:1.5rem;
+    padding-left:1.8rem;
     border-left:24px solid transparent;
     border-image: linear-gradient(
     to bottom,
@@ -52,6 +76,10 @@ h1{
   ) 1;
 }
 
+.h1-red{ color: var(--red); }
+.h1-yellow{ color: var(--yellow); }
+.h1-blue{ color: var(--blue); }
+
 /* Wanted to make my header interactive so I just Googled "fun interactions you can add to your website with CSS" */
 .stacked-title span:hover {
     cursor: pointer;
@@ -60,24 +88,17 @@ h1{
     transform: scale(1.05) translateY(-2px);
 }
 
-.h1-red,.h1-yellow,.h1-blue{
-  border-left:none;
-  padding-left:0;
-}
-
-.h1-red{ color: var(--red); }
-.h1-yellow{ color: var(--yellow); }
-.h1-blue{ color: var(--blue); }
-
 h2{
     font-family:Gabarito;
-    font-size:2rem;
+    font-size:2.5rem;
     font-weight:600;
     position:sticky;
+    top:2rem;
+    z-index: 1;
     inline-size:50%;
     min-inline-size:16rem;
     max-inline-size:22rem;
-    top:2rem;
+    background: white; 
 }
 
 h3{
@@ -88,14 +109,20 @@ h3{
 
 .bold-text {
     font-family: var(--font-sans);
-    font-size: 1rem;  
+    font-size: 1.2rem;  
     font-weight: 700;
 }
 
 .italicize-text {
     font-family: var(--font-sans);
     font-style: italic;
-    line-height: 200%;
+    line-height: 2;
+}
+
+header > p,
+header > p.bold-text,
+header > p > time {
+    margin-block: 1.5rem;
 }
 
 .red{
@@ -116,24 +143,53 @@ h3{
 
 section>p:first-of-type::first-letter {
 	font-family:Gabarito;
-    font-size:2rem;
+    font-size:2.2rem;
+    line-height:1;
     font-weight:600;
+}
+
+.yellow + blockquote + p::first-letter {
+    color: var(--yellow);
+}
+
+a.red-hover {
+    text-decoration: underline;
+    text-decoration-color: var(--red);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px; 
+}
+
+a.yellow-hover {
+    text-decoration: underline;
+    text-decoration-color: var(--yellow);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px; 
+}
+
+a.blue-hover {
+    text-decoration: underline;
+    text-decoration-color: var(--blue);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px; 
 }
 
 .red-hover:hover{
     text-decoration: underline;
+    text-decoration-color: var(--red);
     color:#FFFFFF;
     background:#EC0B43; 
 }
 
 .yellow-hover:hover{
     text-decoration: underline;
+    text-decoration-color: var(--yellow);
     color:#262626;
     background:#FFBC42; 
 }
 
 .blue-hover:hover{
     text-decoration: underline;
+    text-decoration-color: var(--blue);
     color:#FFFFFF;
     background:#0353A4; 
 }
@@ -171,7 +227,7 @@ section>p:first-of-type::first-letter {
     font-weight:600;
 }
 
-.heading-dark-blue{
+.heading-light-blue{
     color:#3699FC;
     font-family:Gabarito;
     font-size:2rem;
@@ -202,8 +258,8 @@ section>p:first-of-type::first-letter {
 blockquote{
     margin-inline-start: 2rem;
     margin-inline-end: 2rem;
-    margin-block-start: 2rem;
-    margin-block-end: 2rem;
+    margin-block-start: 4rem;
+    margin-block-end: 4rem;
 }
 
 blockquote p{
@@ -212,10 +268,12 @@ blockquote p{
     padding-left: 0rem;
     font-style: italic;
     font-weight: 600;
+    margin-block:1rem;
 }
 
 blockquote footer {
-  line-height: 1.8;
+    line-height: 1.8;
+    font-size: 1.2rem; 
 }
 
 .blockquote-red{
@@ -236,6 +294,7 @@ blockquote footer {
     line-height: 1;
     position: relative;
     left: -0.75rem;
+    right:1rem;
     top: 0.25rem;
     color: var(--red);
 }
@@ -305,7 +364,7 @@ blockquote footer {
     color:white;
     font-weight: 400;
     padding-left: 1.5rem;
-    border-left: 6px solid #0353A4;
+    border-left: 6px solid #3699FC;
 }
 
 .black{
@@ -313,24 +372,25 @@ blockquote footer {
     margin-inline:-2rem;
     margin-block-end:-2rem;
     padding-inline: 8rem;
-    padding-block: 2rem;
+    padding-block-start: 4rem;
+    padding-block-end: 2rem;
 }
 
 article.black p {
-  min-inline-size: 40ch;
-  max-inline-size: 100ch;
+    min-inline-size: 40ch;
+    max-inline-size: 90ch;
 }
 
 article.black > h1.white {
-  padding-block-start: 1rem;
-  padding-block-end: 2rem;
+    padding-block-start: 1rem;
+    padding-block-end: 2rem;
 }
 
 header{
-    margin-top: 80px;
+    margin-top: 60px;
     margin-bottom: 80px; 
     padding-left: 100px;
-    padding-right: 100px;
+    padding-right: 120px;
 }
 
 header>p{
@@ -357,16 +417,15 @@ h2.subhead{
     inline-size: auto;
     min-inline-size: auto;
     max-inline-size: none;
-    margin-block-start: 0rem;
-    margin-block-end: 4rem;
+    margin-block-start: 2rem;
+    margin-block-end: 2rem;
     position:relative;
 }
 
 small {
-  display: block;
-  max-inline-size: 100ch;
-  font-size: 1rem;
-  line-height: 1.5;
+    max-inline-size: 100ch;
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
 
 body>footer{

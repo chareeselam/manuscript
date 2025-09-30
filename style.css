@@ -1,52 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
 
+:root{
+    --font-sans:"Roboto", sans-serif;
+    --font-display:"Gabarito", sans-serif;
+
+    --text:#262626;
+    --white:#FFFFFF;
+
+    --red:#EC0B43;
+    --yellow:#FFBC42;
+    --blue:#0353A4;
+
+    --gutter-l:2rem;
+    --gutter-r:4rem;
+}
+
+a:any-link{
+    color: inherit; 
+    text-decoration: underline;
+}
+
 p{
-    font-family: Roboto;
+    font-family:var(--font-sans);
     color: #262626;
     font-size: 1rem;
-    line-height: 180%;
+    line-height: 1.8;
     font-weight: 400;
+    padding-left: 50%;
+    margin-bottom: 1.5rem;
 }
 
 h1{
-    font-family: Gabarito;
-    font-size: 12rem;
+    font-family:var(--font-display);
+    font-size: 9rem;
     text-transform: uppercase;
-    font-weight: 800;
-}
-.h1-red{
-    color:#EC0B43;
-    font-family: Gabarito;
-    font-size: 12rem;
-    text-transform: uppercase;
-    font-weight: 800;
-    padding-left: 1.5rem;
-    border-left: 20px solid #EC0B43;
+    font-weight: 900;
+    line-height: 1;
 }
 
-.h1-yellow{
-    color:#FFBC42;
-    font-family: Gabarito;
-    font-size: 12rem;
-    text-transform: uppercase;
-    font-weight: 800;
-    padding-left: 1.5rem;
-    border-left: 20px solid #FFBC42;
+.stacked-title{
+    display:inline-flex;
+    flex-direction:column;
+    align-items:flex-start;
+    padding-left:1.5rem;
+    border-left:24px solid transparent;
+    border-image: linear-gradient(
+    to bottom,
+    #EC0B43 0 33%,
+    #FFBC42 33% 66%,
+    #0353A4 66% 100%
+  ) 1;
 }
 
-.h1-blue{
-    color:#0353A4;
-    font-family: Gabarito;
-    font-size: 12rem;
-    text-transform: uppercase;
-    font-weight: 800;
-    padding-left: 1.5rem;
-    border-left: 20px solid #0353A4;
+/* Wanted to make my header interactive so I just Googled "fun interactions you can add to your website with CSS" */
+.stacked-title span:hover {
+    cursor: pointer;
+    filter: brightness(1.1); 
+    transition: all 0.3s ease;
+    transform: scale(1.05) translateY(-2px);
 }
+
+.h1-red,.h1-yellow,.h1-blue{
+  border-left:none;
+  padding-left:0;
+}
+
+.h1-red{ color: var(--red); }
+.h1-yellow{ color: var(--yellow); }
+.h1-blue{ color: var(--blue); }
 
 h2{
     font-family:Gabarito;
     font-size:2rem;
+    font-weight:600;
+    position:sticky;
+    inline-size:50%;
+    min-inline-size:16rem;
+    max-inline-size:22rem;
+    top:2rem;
 }
 
 h3{
@@ -56,32 +87,31 @@ h3{
 }
 
 .bold-text {
-    font-family: Roboto;
-    color: #262626;
+    font-family: var(--font-sans);
     font-size: 1rem;  
     font-weight: 700;
 }
 
 .italicize-text {
-    font-family: Roboto;
+    font-family: var(--font-sans);
     font-style: italic;
-    line-height: 180%;
-    font-weight: 400;
+    line-height: 200%;
 }
+
 .red{
-    color:#EC0B43
+    color:var(--red)
 }
 
 .yellow{
-    color:#FFBC42
+    color:var(--yellow)
 }
 
 .blue{
-    color:#0353A4
+    color:var(--blue)
 }
 
 .white{
-    color:#FFFFFF
+    color:white
 }
 
 section>p:first-of-type::first-letter {
@@ -90,8 +120,34 @@ section>p:first-of-type::first-letter {
     font-weight:600;
 }
 
-a:link{
+.red-hover:hover{
     text-decoration: underline;
+    color:#FFFFFF;
+    background:#EC0B43; 
+}
+
+.yellow-hover:hover{
+    text-decoration: underline;
+    color:#262626;
+    background:#FFBC42; 
+}
+
+.blue-hover:hover{
+    text-decoration: underline;
+    color:#FFFFFF;
+    background:#0353A4; 
+}
+
+.red + p::first-letter {
+    color: #EC0B43;
+}
+
+.yellow + p::first-letter {
+    color: #FFBC42;
+}
+
+.blue + p::first-letter {
+    color: #0353A4;
 }
 
 .heading-red{
@@ -143,32 +199,89 @@ a:link{
 }
 /* Got this from MDN */
 
-.blockquote-red{
-    font-family: Roboto;
+blockquote{
+    margin-inline-start: 2rem;
+    margin-inline-end: 2rem;
+    margin-block-start: 2rem;
+    margin-block-end: 2rem;
+}
+
+blockquote p{
+    max-inline-size: 60ch;
+    margin-inline: auto;
+    padding-left: 0rem;
     font-style: italic;
     font-weight: 600;
-    margin: 2rem;
+}
+
+blockquote footer {
+  line-height: 1.8;
+}
+
+.blockquote-red{
+    font-family: Roboto;
+    font-weight: 600;
+    font-style: italic;
     padding-left: 1.5rem;
-    border-left: 6px solid #EC0B43;
+    border-left: 6px solid var(--red);
+    margin-inline-start:60%;
+}
+
+.blockquote-red::before{
+    content: "“";
+    font-family: Gabarito;
+    font-style:normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1;
+    position: relative;
+    left: -0.75rem;
+    top: 0.25rem;
+    color: var(--red);
 }
 
 .blockquote-yellow{
     font-family: Roboto;
-    font-style: italic;
     font-weight: 600;
-    margin: 2rem;
+    font-style: italic;
     padding-left: 1.5rem;
-    border-left: 6px solid #FFBC42;
+    border-left: 6px solid var(--yellow);
+    margin-inline-start:60%;
+}
+
+.blockquote-yellow::before{
+    content: "“";
+    font-family: Gabarito;
+    font-style:normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1;
+    position: relative;
+    left: -0.75rem;
+    top: 0.25rem;
+    color: var(--yellow);
 }
 
 .blockquote-blue{
     font-family: Roboto;
-    font-style: italic;
     font-weight: 600;
-    margin: 2rem;
+    font-style: italic;
     padding-left: 1.5rem;
+    border-left: 6px solid var(--blue);
+    margin-inline-start:60%;
+}
 
-    border-left: 6px solid #0353A4;
+.blockquote-blue::before{
+    content: "“";
+    font-family: Gabarito;
+    font-style:normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1;
+    position: relative;
+    left: -0.75rem;
+    top: 0.25rem;
+    color: var(--blue);
 }
 
 .response-red{
@@ -195,9 +308,22 @@ a:link{
     border-left: 6px solid #0353A4;
 }
 
-/*Following content is me experimenting and learning from Type 1 2324 Github page */
 .black{
     background-color:black;
+    margin-inline:-2rem;
+    margin-block-end:-2rem;
+    padding-inline: 8rem;
+    padding-block: 2rem;
+}
+
+article.black p {
+  min-inline-size: 40ch;
+  max-inline-size: 100ch;
+}
+
+article.black > h1.white {
+  padding-block-start: 1rem;
+  padding-block-end: 2rem;
 }
 
 header{
@@ -205,6 +331,11 @@ header{
     margin-bottom: 80px; 
     padding-left: 100px;
     padding-right: 100px;
+}
+
+header>p{
+    padding-left:0px;
+    line-height:1;
 }
 
 section:not(:first-child){ 
@@ -221,3 +352,30 @@ section:first-child{
     padding-right: 150px;
 }
 
+h2.subhead{
+    text-align:end;
+    inline-size: auto;
+    min-inline-size: auto;
+    max-inline-size: none;
+    margin-block-start: 0rem;
+    margin-block-end: 4rem;
+    position:relative;
+}
+
+small {
+  display: block;
+  max-inline-size: 100ch;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+body>footer{
+    margin-inline:-2rem;
+    margin-block-end:-2rem;
+    padding-inline-start: 8rem;
+    padding-inline-end:2rem;
+    padding-block-start: 2rem;
+    padding-block-end: 2rem;
+    color:white;
+    background-color: black;
+}

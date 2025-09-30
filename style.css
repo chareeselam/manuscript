@@ -320,42 +320,18 @@ blockquote footer {
     color: var(--blue);
 }
 
-.response-red{
-    font-family: Roboto;
-    color:white;
-    font-weight: 400;
-    padding-left: 1.5rem;
-    border-left: 6px solid #EC0B43;
-}
-
-.response-yellow{
-    font-family: Roboto;
-    color:white;
-    font-weight: 400;
-    padding-left: 1.5rem;
-    border-left: 6px solid #FFBC42;
-}
-
-.response-light-blue{
-    font-family: Roboto;
-    color:white;
-    font-weight: 400;
-    padding-left: 1.5rem;
-    border-left: 6px solid #3699FC;
-}
-
 .black{
     background-color:black;
     margin-inline:-2rem;
     margin-block-end:-2rem;
     padding-inline: 8rem;
-    padding-block-start: 4rem;
+    padding-block-start: 6rem;
     padding-block-end: 2rem;
 }
 
 article.black p {
     min-inline-size: 40ch;
-    max-inline-size: 90ch;
+    max-inline-size: 80ch;
 }
 
 article.black > h1.white {
@@ -433,14 +409,26 @@ section > h2.blue ~ p.drop-cap::first-letter{
     line-height: 1;
 }
 
-.response-red.drop-cap::first-letter {
-  color: var(--red);
+.response p{
+    font-family: var(--font-sans);
+    color: white;
+    font-weight: 400;
+    line-height:2.2rem;
+    padding-left: 0rem;
+    margin-block: 3rem;
 }
 
-.response-yellow.drop-cap::first-letter {
-  color: var(--yellow);
+.response-border{
+    border-left: 12px solid transparent;
+    border-image: linear-gradient(
+    to bottom,
+    var(--red) 0 33%,
+    var(--yellow) 33% 66%,
+    var(--blue) 66% 100%
+    ) 1;
+    padding-left: 1rem;
 }
 
-.response-light-blue.drop-cap::first-letter {
-  color: #3699FC;
+section > p.drop-cap::first-letter{
+    color: var(--red);
 }

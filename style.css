@@ -141,17 +141,6 @@ header > p > time {
     color:white
 }
 
-section>p:first-of-type::first-letter {
-	font-family:Gabarito;
-    font-size:2.2rem;
-    line-height:1;
-    font-weight:600;
-}
-
-.yellow + blockquote + p::first-letter {
-    color: var(--yellow);
-}
-
 a.red-hover {
     text-decoration: underline;
     text-decoration-color: var(--red);
@@ -192,18 +181,6 @@ a.blue-hover {
     text-decoration-color: var(--blue);
     color:#FFFFFF;
     background:#0353A4; 
-}
-
-.red + p::first-letter {
-    color: #EC0B43;
-}
-
-.yellow + p::first-letter {
-    color: #FFBC42;
-}
-
-.blue + p::first-letter {
-    color: #0353A4;
 }
 
 .heading-red{
@@ -359,7 +336,7 @@ blockquote footer {
     border-left: 6px solid #FFBC42;
 }
 
-.response-blue{
+.response-light-blue{
     font-family: Roboto;
     color:white;
     font-weight: 400;
@@ -437,4 +414,33 @@ body>footer{
     padding-block-end: 2rem;
     color:white;
     background-color: black;
+}
+
+section > h2.red ~ p.drop-cap::first-letter{
+    color: var(--red);
+}
+section > h2.yellow ~ p.drop-cap::first-letter{
+    color: var(--yellow);
+}
+section > h2.blue ~ p.drop-cap::first-letter{ 
+    color: var(--blue); 
+}
+
+.drop-cap::first-letter{
+    font-family:Gabarito;
+    font-size:3rem;
+    font-weight:600;
+    line-height: 1;
+}
+
+.response-red.drop-cap::first-letter {
+  color: var(--red);
+}
+
+.response-yellow.drop-cap::first-letter {
+  color: var(--yellow);
+}
+
+.response-light-blue.drop-cap::first-letter {
+  color: #3699FC;
 }

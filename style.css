@@ -4,12 +4,12 @@
     --font-sans:"Roboto", sans-serif;
     --font-display:"Gabarito", sans-serif;
 
-    --text:#262626;
+    --black:#262626;
     --white:#FFFFFF;
-
     --red:#EC0B43;
     --yellow:#FFBC42;
     --blue:#0353A4;
+    --light-blue:#3699FC;
 
     --gutter-l:2rem;
     --gutter-r:4rem;
@@ -43,7 +43,7 @@ html{
 
 .top:active{
     background: var(--yellow);
-    color:var(--text);
+    color:var(--black);
 }
 
 p{
@@ -95,7 +95,7 @@ However, the borders were overlapping and bugged me because they weren't equal l
 
 h2{
     font-family:Gabarito;
-    font-size:2.5rem;
+    font-size:3rem;
     font-weight:600;
     position:sticky;
     top:2rem;
@@ -143,7 +143,7 @@ header > p > time {
 }
 
 .white{
-    color:white
+    color:var(--white)
 }
 
 a.red-hover {
@@ -151,6 +151,7 @@ a.red-hover {
     text-decoration-color: var(--red);
     text-decoration-thickness: 2px;
     text-underline-offset: 3px; 
+    color:var(--black);
 }
 
 a.yellow-hover {
@@ -158,6 +159,7 @@ a.yellow-hover {
     text-decoration-color: var(--yellow);
     text-decoration-thickness: 2px;
     text-underline-offset: 3px; 
+    color:var(--black);
 }
 
 a.blue-hover {
@@ -165,83 +167,61 @@ a.blue-hover {
     text-decoration-color: var(--blue);
     text-decoration-thickness: 2px;
     text-underline-offset: 3px; 
+    color:var(--black);
 }
 
 .red-hover:hover{
     text-decoration: underline;
     text-decoration-color: var(--red);
-    color:#FFFFFF;
-    background:#EC0B43; 
+    color:var(--white);
+    background:var(--red); 
 }
 
 .yellow-hover:hover{
     text-decoration: underline;
     text-decoration-color: var(--yellow);
-    color:#262626;
-    background:#FFBC42; 
+    color:var(--black);
+    background:var(--yellow); 
 }
 
 .blue-hover:hover{
     text-decoration: underline;
     text-decoration-color: var(--blue);
-    color:#FFFFFF;
-    background:#0353A4; 
-}
-
-.heading-red{
-    color:#EC0B43;
-    font-family:Gabarito;
-    font-size:2rem;
-    font-weight:600;
-}
-
-.heading-yellow{
-    color:#FFBC42;
-    font-family:Gabarito;
-    font-size:2rem;
-    font-weight:600;
-}
-
-.heading-blue{
-    color:#0353A4;
-    font-family:Gabarito;
-    font-size:2rem;
-    font-weight:600;
+    color:var(--white);
+    background:var(--blue); 
 }
 
 .heading-light-blue{
-    color:#3699FC;
+    color:var(--light-blue);
     font-family:Gabarito;
     font-size:2rem;
     font-weight:600;
 }
 
 .outline-red{
-    color:white;
+    color:var(--white);
     letter-spacing: 0.05em;
     text-shadow: -1px -1px 0 #EC0B43, 1px -1px 0 #EC0B43, -1px 1px 0 #EC0B43, 1px 1px 0 #EC0B43;
 }
 /* Got this from MDN */
 
 .outline-yellow{
-    color:white;
+    color:var(--white);
     letter-spacing: 0.05em;
     text-shadow: -1px -1px 0 #FFBC42, 1px -1px 0 #FFBC42, -1px 1px 0 #FFBC42, 1px 1px 0 #FFBC42;
 }
 /* Got this from MDN */
 
 .outline-blue{
-    color:white;
+    color:var(--white);
     letter-spacing: 0.05em;
     text-shadow: -1px -1px 0 #0353A4, 1px -1px 0 #0353A4, -1px 1px 0 #0353A4, 1px 1px 0 #0353A4;
 }
 /* Got this from MDN */
 
 blockquote{
-    margin-inline-start: 2rem;
-    margin-inline-end: 2rem;
-    margin-block-start: 4rem;
-    margin-block-end: 4rem;
+    margin-inline: 2rem;
+    margin-block: 4rem;
 }
 
 blockquote p{
@@ -258,16 +238,16 @@ blockquote footer {
     font-size: 1.2rem; 
 }
 
-.blockquote-red{
+.blockquote{
     font-family: Roboto;
     font-weight: 600;
     font-style: italic;
     padding-left: 1.5rem;
-    border-left: 6px solid var(--red);
+    border-left: 6px solid;
     margin-inline-start:60%;
 }
 
-.blockquote-red::before{
+.blockquote::before{
     content: "“";
     font-family: Gabarito;
     font-style:normal;
@@ -278,55 +258,10 @@ blockquote footer {
     left: -0.75rem;
     right:1rem;
     top: 0.25rem;
-    color: var(--red);
-}
-
-.blockquote-yellow{
-    font-family: Roboto;
-    font-weight: 600;
-    font-style: italic;
-    padding-left: 1.5rem;
-    border-left: 6px solid var(--yellow);
-    margin-inline-start:60%;
-}
-
-.blockquote-yellow::before{
-    content: "“";
-    font-family: Gabarito;
-    font-style:normal;
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 1;
-    position: relative;
-    left: -0.75rem;
-    top: 0.25rem;
-    color: var(--yellow);
-}
-
-.blockquote-blue{
-    font-family: Roboto;
-    font-weight: 600;
-    font-style: italic;
-    padding-left: 1.5rem;
-    border-left: 6px solid var(--blue);
-    margin-inline-start:60%;
-}
-
-.blockquote-blue::before{
-    content: "“";
-    font-family: Gabarito;
-    font-style:normal;
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 1;
-    position: relative;
-    left: -0.75rem;
-    top: 0.25rem;
-    color: var(--blue);
 }
 
 .black{
-    background-color:black;
+    background-color:#262626;
     margin-inline:-2rem;
     margin-block-end:-2rem;
     padding-inline: 8rem;
@@ -424,7 +359,7 @@ section > h2.blue ~ p.drop-cap::first-letter{
     margin-block: 3rem;
 }
 
-.response-border{
+.multicolor-border{
     border-left: 12px solid transparent;
     border-image: linear-gradient(
     to bottom,

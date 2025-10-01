@@ -194,21 +194,24 @@ a.blue-hover {
 .outline-red{
     color:var(--white);
     letter-spacing: 0.05em;
-    text-shadow: -1px -1px 0 #EC0B43, 1px -1px 0 #EC0B43, -1px 1px 0 #EC0B43, 1px 1px 0 #EC0B43;
+    -webkit-text-stroke: 3px;
+    paint-order: stroke fill;
 }
 /* Got this from MDN */
 
 .outline-yellow{
     color:var(--white);
     letter-spacing: 0.05em;
-    text-shadow: -1px -1px 0 #FFBC42, 1px -1px 0 #FFBC42, -1px 1px 0 #FFBC42, 1px 1px 0 #FFBC42;
+    -webkit-text-stroke: 3px var(--yellow);
+    paint-order: stroke fill;
 }
 /* Got this from MDN */
 
 .outline-blue{
     color:var(--white);
     letter-spacing: 0.05em;
-    text-shadow: -1px -1px 0 #0353A4, 1px -1px 0 #0353A4, -1px 1px 0 #0353A4, 1px 1px 0 #0353A4;
+    -webkit-text-stroke: 3px var(--blue);
+    paint-order: stroke fill;
 }
 /* Got this from MDN */
 

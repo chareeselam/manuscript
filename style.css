@@ -194,7 +194,7 @@ a.blue-hover {
 .outline-red{
     color:var(--white);
     letter-spacing: 0.05em;
-    -webkit-text-stroke: 3px;
+    -webkit-text-stroke: 3px var(--red);
     paint-order: stroke fill;
 }
 /* Got this from MDN */

@@ -50,7 +50,7 @@ p{
     font-family:var(--font-sans);
     color: #262626;
     font-size: 1.2rem;
-    line-height: 2.2;
+    line-height: 1.8;
     font-weight: 400;
     padding-left: 50%;
     margin-block: 3rem;
@@ -80,10 +80,6 @@ However, the borders were overlapping and bugged me because they weren't equal l
     #0353A4 66% 100%
   ) 1;
 }
-
-.h1-red{ color: var(--red); }
-.h1-yellow{ color: var(--yellow); }
-.h1-blue{ color: var(--blue); }
 
 /* Wanted to make my header interactive so I just Googled "fun interactions you can add to your website with CSS" */
 .stacked-title span:hover {
@@ -146,74 +142,52 @@ header > p > time {
     color:var(--white)
 }
 
-a.red-hover {
-    text-decoration: underline;
-    text-decoration-color: var(--red);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 3px; 
-    color:var(--black);
+.black{
+    color:var(--black)
 }
 
-a.yellow-hover {
-    text-decoration: underline;
+a.red, 
+a.yellow, 
+a.blue {
+  color: var(--black);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+a.red{
+    text-decoration-color: var(--red); 
+    &:hover{
+        color: var(--white);
+        background: var(--red);
+    }
+}
+
+a.yellow{
     text-decoration-color: var(--yellow);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 3px; 
-    color:var(--black);
+    &:hover{
+        color: var(--black);
+        background: var(--yellow);
+    }
+}
+a.blue{
+    text-decoration-color: var(--blue); 
+    &:hover{
+        color: var(--white);
+        background: var(--blue);
+    }
 }
 
-a.blue-hover {
-    text-decoration: underline;
-    text-decoration-color: var(--blue);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 3px; 
-    color:var(--black);
+.outline{
+  color: var(--white);
+  letter-spacing: 0.05em;
+  paint-order: stroke fill;
+  -webkit-text-stroke: 3px; 
 }
 
-.red-hover:hover{
-    text-decoration: underline;
-    text-decoration-color: var(--red);
-    color:var(--white);
-    background:var(--red); 
-}
-
-.yellow-hover:hover{
-    text-decoration: underline;
-    text-decoration-color: var(--yellow);
-    color:var(--black);
-    background:var(--yellow); 
-}
-
-.blue-hover:hover{
-    text-decoration: underline;
-    text-decoration-color: var(--blue);
-    color:var(--white);
-    background:var(--blue); 
-}
-
-.outline-red{
-    color:var(--white);
-    letter-spacing: 0.05em;
-    -webkit-text-stroke: 3px var(--red);
-    paint-order: stroke fill;
-}
-/* Got this from MDN */
-
-.outline-yellow{
-    color:var(--white);
-    letter-spacing: 0.05em;
-    -webkit-text-stroke: 3px var(--yellow);
-    paint-order: stroke fill;
-}
-/* Got this from MDN */
-
-.outline-blue{
-    color:var(--white);
-    letter-spacing: 0.05em;
-    -webkit-text-stroke: 3px var(--blue);
-    paint-order: stroke fill;
-}
-/* Got this from MDN */
+.outline.red    { -webkit-text-stroke-color: var(--red); }
+.outline.yellow { -webkit-text-stroke-color: var(--yellow); }
+.outline.blue   { -webkit-text-stroke-color: var(--blue); }
 
 blockquote{
     margin-inline: 2rem;
@@ -256,8 +230,8 @@ blockquote footer {
     top: 0.25rem;
 }
 
-.black{
-    background-color:#262626;
+.grey-bg{
+    background-color:#D9D9D9;
     margin-inline:-2rem;
     margin-block-end:-2rem;
     padding-inline: 8rem;
@@ -323,8 +297,7 @@ body>footer{
     margin-block-end:-2rem;
     padding-inline-start: 8rem;
     padding-inline-end:2rem;
-    padding-block-start: 2rem;
-    padding-block-end: 2rem;
+    padding-block:2rem;
     color:white;
     background-color: black;
 }
@@ -348,9 +321,9 @@ section > h2.blue ~ p.drop-cap::first-letter{
 
 .response p{
     font-family: var(--font-sans);
-    color: white;
+    color: var(--black);
     font-weight: 400;
-    line-height:2.2rem;
+    line-height:2rem;
     padding-left: 0rem;
     margin-block: 3rem;
 }

@@ -1,58 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
 
 :root{
     --font-sans:"Roboto", sans-serif;
     --font-display:"Gabarito", sans-serif;
+    --font-blockquote:"Lora", serif;
 
     --black:#262626;
     --white:#FFFFFF;
     --red:#EC0B43;
     --yellow:#FFBC42;
     --blue:#0353A4;
-    --light-blue:#3699FC;
-
-    --gutter-l:2rem;
-    --gutter-r:4rem;
 }
 
 html{
     scroll-behavior: smooth;
 }
 
-.top{
-    color: var(--white);
-    font-size: 1.4rem;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    position: fixed;
-    background-color: var(--blue);
-    bottom: 40px;
-    right: 40px;
-    z-index: 100;
-    border-radius: 100%;
-}
-
-.top:hover{
-    background: var(--red);
-    transform: scale(1.2);  
-}
-
-.top:active{
-    background: var(--yellow);
-    color:var(--black);
-}
-
 p{
     font-family:var(--font-sans);
-    color: #262626;
+    color: var(--black);
     font-size: 1.2rem;
     line-height: 2;
     font-weight: 400;
-    padding-left: 33%;
+    padding-left: 40%;
     margin-block: 3rem;
 }
 
@@ -64,65 +34,53 @@ h1{
     line-height: 1;
 }
 
-.stacked-title{
-    display:inline-flex;
-    flex-direction:column;
-    align-items:flex-start;
-    padding-left:1.8rem;
-    border-left:24px solid transparent;
-    border-image: linear-gradient(
-    to bottom,
-    #EC0B43 0 33%,
-    #FFBC42 33% 66%,
-    #0353A4 66% 100%
-  ) 1;
-}
-
-/* Wanted to make my header interactive so I just Googled "fun interactions you can add to your website with CSS" */
-.stacked-title span:hover {
-    cursor: pointer;
-    filter: brightness(1.1); 
-    transition: all 0.3s ease;
-    transform: scale(1.05) translateY(-2px);
-}
-
 h2{
-    font-family:Gabarito;
-    font-size:3rem;
-    font-weight:600;
-    position:sticky;
-    top:2rem;
+    font-family: Gabarito;
+    font-size: 3rem;
+    font-weight: 600;
+    position: sticky;
+    top: 2rem;
     z-index: 1;
-    inline-size:50%;
-    min-inline-size:16rem;
-    max-inline-size:22rem;
+    inline-size: 50%;
+    min-inline-size: 16rem;
+    max-inline-size: 22rem;
+    padding-inline-end:2rem;
     background: white; 
 }
 
 h3{
     font-family: Gabarito;
-    font-size:2.5rem;
-    font-weight:800;
+    font-size: 2.5rem;
+    font-weight: 800;
 }
 
-.bold-text {
-    font-family: var(--font-sans);
+.bold {
+    font-family:var(--font-sans);
     font-size: 1.2rem;  
     font-weight: 700;
 }
 
-.italicize-text {
-    font-family: var(--font-sans);
+.italicize {
+    font-family:var(--font-sans);
     font-style: italic;
     line-height: 2;
 }
 
-header > p,
-header > p.bold-text,
-header > p > time {
-    margin-block: 1.5rem;
+section{ 
+    margin-block: 10rem;
+    padding-inline-start: 8rem;
+    padding-inline-end: 10rem;
 }
 
+main > article:nth-of-type(1) {
+    margin-block-start: 6rem;
+}
+
+/* second article in <main> */
+main > article:nth-of-type(2) {
+    margin-block-start: 16rem;
+}
+/*--------------------color--------------------*/
 .red{
     color:var(--red)
 }
@@ -143,135 +101,98 @@ header > p > time {
     color:var(--black)
 }
 
+/*--------------------links--------------------*/
 a.red, 
 a.yellow, 
 a.blue {
-  color: var(--black);
+  color:var(--black);
   text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
+  text-decoration-thickness: 15%;
+  text-underline-offset: 10%;
 }
 
 a.red{
-    text-decoration-color: var(--red); 
+    text-decoration-color:var(--red); 
     &:hover{
-        color: var(--white);
-        background: var(--red);
+        color:var(--white);
+        background:var(--red);
     }
 }
 
 a.yellow{
-    text-decoration-color: var(--yellow);
+    text-decoration-color:var(--yellow);
     &:hover{
-        color: var(--black);
-        background: var(--yellow);
+        color:var(--black);
+        background:var(--yellow);
     }
 }
 a.blue{
-    text-decoration-color: var(--blue); 
+    text-decoration-color:var(--blue); 
     &:hover{
-        color: var(--white);
-        background: var(--blue);
+        color:var(--white);
+        background:var(--blue);
     }
 }
 
+/*--------------------button--------------------*/
+.top{
+    color:var(--white);
+    font-size: 1.4rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    background-color:var(--blue);
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 100;
+    border-radius: 100%;
+}
+
+.top:hover{
+    background:var(--red);
+    transform: scale(1.2);  
+}
+
+.top:active{
+    background:var(--yellow);
+    color:var(--black);
+}
+
+/*--------------------outline--------------------*/
 .outline{
-  color: var(--white);
+  color:var(--white);
   letter-spacing: 0.05em;
   paint-order: stroke fill;
   -webkit-text-stroke: 3px; 
 }
 
-.outline.red    { -webkit-text-stroke-color: var(--red); }
-.outline.yellow { -webkit-text-stroke-color: var(--yellow); }
-.outline.blue   { -webkit-text-stroke-color: var(--blue); }
+.outline.red    { -webkit-text-stroke-color:var(--red); }
+.outline.yellow { -webkit-text-stroke-color:var(--yellow); }
+.outline.blue   { -webkit-text-stroke-color:var(--blue); }
+/*From Michael via Slack*/
 
-blockquote{
-    margin-inline: 0rem;
-    margin-block: 4rem;
-}
-
-blockquote p{
-    font-weight: 600;
-    font-size:1.8rem;
-    font-style: italic;
-    max-inline-size: 100ch;
-    margin-inline: initial;
-    padding-left: 0rem;
-    font-style: italic;
-    font-weight: 600;
-    margin-block:1rem;
-}
-
-blockquote footer {
-    line-height: 1.8;
-    font-size: 1rem; 
-    font-family: Roboto;
-    font-weight: 600;
-    font-size:2rem;
-    font-style: italic;
-}
-
-.blockquote{
-    padding-left: 1.5rem;
-    border-left: 6px solid;
-    margin-inline-start:50%;
-}
-
-.blockquote::before{
-    content: "“";
-    font-family: Gabarito;
-    font-style:normal;
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 1;
-    position: relative;
-    left: -0.75rem;
-    right:1rem;
-    top: 0.25rem;
-}
-
-.grey-bg{
-    background-color:#D9D9D9;
-    margin-inline:-2rem;
-    margin-block-end:-2rem;
-    padding-inline: 8rem;
-    padding-block-start: 6rem;
-    padding-block-end: 2rem;
-}
-
-article.black p {
-    min-inline-size: 40ch;
-    max-inline-size: 80ch;
-}
-
-article.black > h1.white {
-    padding-block-start: 1rem;
-    padding-block-end: 2rem;
-}
-
+/*--------------------header--------------------*/
 header{
-    margin-top: 60px;
-    margin-bottom: 80px; 
-    padding-left: 100px;
-    padding-right: 120px;
+    margin-block-start: 6rem;
+    margin-block-end: 8rem; 
+    padding-inline: 8rem;
 }
 
 header>p{
-    padding-left:0px;
+    padding-left:0rem;
     line-height:1;
 }
 
-section:not(:first-child){ 
-    margin-block: 200px;
-    padding-inline-start: 100px;
-    padding-inline-end: 150px;
+header > p{
+    margin-block: 1rem;
 }
 
-section:first-child{ 
-    margin-block: 80px; 
-    padding-inline-start: 100px;
-    padding-inline-end: 150px;
+header > p.bold{
+    margin-block: 2rem;
 }
 
 h2.subhead{
@@ -282,24 +203,145 @@ h2.subhead{
     margin-block-start: 2rem;
     margin-block-end: 2rem;
     position:relative;
+    font-family:var(--font-blockquote);
 }
 
 small {
     max-inline-size: 100ch;
     font-size: 1.2rem;
-    line-height: 1.5;
-    
+    line-height: 1.5;    
 }
 
-body>footer{
-    margin-inline:-2rem;
-    margin-block-end:-2rem;
-    padding-inline-start: 8rem;
-    padding-inline-end:2rem;
-    padding-block:2rem;
-    color:white;
-    background-color: black;
+/* Wanted to make 1 line 3 colors instead of 3 lines 3 colors and discovered inline-flex through MDN.
+Link to display:https://developer.mozilla.org/en-US/docs/Web/CSS/display
+Link to border-image:linear-gradient -> https://developer.mozilla.org/en-US/docs/Web/CSS/border-image */
+.stacked-title{
+    display:inline-flex;
+    flex-direction:column;
+    align-items:flex-start;
+    padding-left:1.8rem;
+    border-left:24px solid transparent;
+    border-image: linear-gradient(
+    to bottom,
+    #EC0B43 0 33%,
+    #FFBC42 33% 66%,
+    #0353A4 66% 100%
+  ) 1;
 }
+
+/* Wanted to make my header interactive so I Googled "fun interactions you can add to your website with CSS." Google AI Overview came up with a few suggestions -> I looked into what they were on MDN (see links below) */
+.stacked-title span:hover {
+    cursor: pointer;
+    /*https://developer.mozilla.org/en-US/docs/Web/CSS/cursor*/
+    filter: brightness(1.1); 
+    /*https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/brightness*/
+    transition: all 0.3s ease;
+    /*https://developer.mozilla.org/en-US/docs/Web/CSS/transition*/
+    transform: scale(1.05) translateY(-2px);
+    /*https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateY*/
+}
+
+/*--------------------blockquote--------------------*/
+blockquote{
+    margin-inline: 0rem;
+    margin-block: 4rem;
+}
+
+blockquote p,
+section.response blockquote p{
+    font-weight: 600;
+    font-family:var(--font-blockquote);
+    font-size:1.8rem;
+    max-inline-size: 100ch;
+    margin-inline: initial;
+    padding-left: 0rem;
+    margin-block:1rem;
+    line-height:1.5;
+}
+
+blockquote footer,
+section.response blockquote footer{
+    line-height: 1.4;
+    font-size: 1.8rem; 
+    font-family:var(--font-blockquote);
+    font-weight: 400;
+    font-size:1.6rem;
+    font-style: normal;
+}
+
+.blockquote{
+    padding-left: 1.5rem;
+    border-left: 6px solid;
+    margin-inline-start:50%;
+}
+
+.blockquote::before{
+    content: "“";
+    font-family:var(--font-blockquote);
+    font-style:normal;
+    font-weight: 800;
+    font-size: 2rem;
+    position: relative;
+    left: -0.75rem;
+    top: 0.25rem;
+}
+
+/*--------------------response--------------------*/
+h1.response {
+    background: #f7f7f7;
+    font-size: 8rem; 
+    text-align:left; 
+    padding-block:2rem; 
+}
+
+section.response p{
+    padding-inline-start:0rem;
+    max-inline-size: 65%;
+}
+
+section.response p.drop-cap::first-letter{
+    color: var(--yellow);
+}
+
+section.response blockquote{
+    padding-left: 1.5rem;
+    border-left: 6px solid var(--blue);
+    margin-inline-start: 10%;
+    max-inline-size: 60%;
+}
+
+section.response blockquote footer{
+    color: var(--blue);
+}
+
+section.response blockquote::before{
+    content: "“";
+    font-family:var(--font-blockquote);
+    font-style:normal;
+    font-weight: 800;
+    font-size: 2rem;
+    position: relative;
+    left: -0.75rem;
+    top: 0.25rem;
+    color:var(--blue);
+}
+
+.multicolor-border{
+    border-left: 24px solid transparent;
+    border-image: linear-gradient(
+    to bottom,
+    var(--red) 0 33%,
+    var(--yellow) 33% 66%,
+    var(--blue) 66% 100%
+    ) 1;
+    padding-inline-start: 1.8rem;
+}
+
+h1.response.multicolor-border {
+    margin-inline-start: 40%;
+}
+
+/*--------------------type specifics--------------------*/
 
 .drop-cap::first-letter{
     font-family:Gabarito;
@@ -308,41 +350,20 @@ body>footer{
     line-height: 1;
 }
 
-section > h2.red ~ p.drop-cap::first-letter{
-    color: var(--red);
+section > h2.red ~ p.drop-cap::first-letter,
+section > p.drop-cap::first-letter{
+    color:var(--red);
 }
 section > h2.yellow ~ p.drop-cap::first-letter{
-    color: var(--yellow);
+    color:var(--yellow);
 }
 section > h2.blue ~ p.drop-cap::first-letter{ 
-    color: var(--blue); 
+    color:var(--blue); 
 }
 
-.response p{
-    font-family: var(--font-sans);
-    color: var(--black);
-    font-weight: 400;
-    line-height:2rem;
-    padding-left: 0rem;
-    margin-block: 3rem;
+body>footer{
+    padding-inline-start: 8rem;
+    padding-block:3rem;
+    color:white;
+    background-color: black;
 }
-
-.multicolor-border{
-    border-left: 12px solid transparent;
-    border-image: linear-gradient(
-    to bottom,
-    var(--red) 0 33%,
-    var(--yellow) 33% 66%,
-    var(--blue) 66% 100%
-    ) 1;
-    padding-left: 1rem;
-}
-
-section > p.drop-cap::first-letter{
-    color: var(--red);
-}
-
-.nowrap {
-  white-space: nowrap;
-}
-/* Got it from my new best friend MDN*/

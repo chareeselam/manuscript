@@ -140,23 +140,24 @@ a.blue{
     display: block;
     width: 7.5rem;
     height: 3rem;
-    line-height: 3rem;
+    line-height: 2.8rem;
     text-align: left;
     padding-inline-start: 1rem;
+    align-items: center;
     background: var(--white);
     color: var(--black);
     font-weight: 400;
     font-family: var(--font-sans);
     text-decoration: none;
     border-radius: 0.2rem;
-    border: 2px solid var(--blue);
+    border: 0.2rem solid var(--blue);
     transition: background 0.3s ease;
     position: absolute;
 }
 
 .scroll-button1:hover,
 .scroll-button2:hover{
-    border: 2px solid var(--blue);
+    border: 0.2rem solid var(--blue);
     background: var(--blue);
     color: var(--white);
 }
@@ -204,7 +205,7 @@ a.blue{
     color:var(--white);
     letter-spacing: 0.05em;
     paint-order: stroke fill;
-    -webkit-text-stroke: 3px; 
+    -webkit-text-stroke: 0.25rem; 
 }
 
 .outline.red    { -webkit-text-stroke-color:var(--red); }
@@ -228,8 +229,8 @@ header > p.bold{
 
 h2.subhead{
     text-align:end;
-    inline-size: auto;
-    min-inline-size: auto;
+    inline-size: initial;
+    min-inline-size: initial;
     max-inline-size: none;
     margin-block-start: 2rem;
     margin-block-end: 6rem;
@@ -251,7 +252,7 @@ Link to border-image:linear-gradient -> https://developer.mozilla.org/en-US/docs
     flex-direction:column;
     align-items:flex-start;
     padding-left:1.8rem;
-    border-left:24px solid transparent;
+    border-left:1.4rem solid transparent;
     border-image: linear-gradient(
     to bottom,
     #EC0B43 0 33%,
@@ -267,7 +268,7 @@ Link to border-image:linear-gradient -> https://developer.mozilla.org/en-US/docs
     /*https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/brightness*/
     transition: all 0.3s ease;
     /*https://developer.mozilla.org/en-US/docs/Web/CSS/transition*/
-    transform: scale(1.05) translateY(-2px);
+    transform: scale(1.05) translateY(-0.5rem);
     /*https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateY*/
 }
 
@@ -301,7 +302,7 @@ section.response blockquote footer{
 
 .blockquote{
     padding-left: 1.5rem;
-    border-left: 6px solid;
+    border-left: 0.5rem solid;
     margin-inline-start:50%;
 }
 
@@ -336,7 +337,7 @@ section.response p.drop-cap::first-letter{
 
 section.response blockquote{
     padding-left: 1.5rem;
-    border-left: 6px solid var(--blue);
+    border-left: 0.5rem solid var(--blue);
     margin-inline-start: 10%;
     max-inline-size: 60%;
 }
@@ -359,7 +360,7 @@ section.response blockquote::before{
 
 .multicolor-border{
     border-left: 0;
-    border-right: 24px solid transparent; 
+    border-right: 1.4rem solid transparent; 
     border-image: linear-gradient(
     to bottom,
     var(--red) 0 33%,

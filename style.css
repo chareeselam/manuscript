@@ -5,7 +5,7 @@
     --font-display:"Gabarito", sans-serif;
     --font-blockquote:"Lora", serif;
 
-    --spacing: 2rem;
+    --spacing: 1rem;
 
     --black:#262626;
     --white:#FFFFFF;
@@ -16,32 +16,32 @@
 }
 
 html { scroll-behavior: smooth; }
-body { padding-inline: var(--spacing); }
+body { padding-inline: 1rem; }
 
 /*--------------------font basics--------------------*/
 
 p {
     font-family: var(--font-sans);
     color: var(--black);
-    font-size: 2.9rem;
-    line-height: 5rem;
+    font-size: var(--spacing);
+    line-height: 2.2rem;
     font-weight: 400;
-    padding-block: 2rem;
+    padding-block: 1rem;
 }
 
 h1 {
     font-family: var(--font-display);
-    font-size: 11rem;
+    font-size: 3.8rem;
     text-transform: uppercase;
     font-weight: 900;
-    line-height: 1;
+    line-height: 4.3rem;
 }
 
 h2 {
     font-family: var(--font-display);
-    font-size: 7rem;
+    font-size: 2.5rem;
     font-weight: 600;
-    line-height: 7rem;
+    line-height: 3rem;
     /* position: sticky;
     top: 0rem;
     z-index: 1; */
@@ -54,8 +54,9 @@ h2 {
 
 h3 {
     font-family: var(--font-blockquote);
-    font-size: 4rem;
+    font-size: 1.5rem;
     font-weight: 800;
+    line-height: 2.2rem;
 }
 
 .bold { font-weight: 700; }
@@ -64,18 +65,15 @@ h3 {
 .content {
     display: flex;
     flex-direction: column;
-    padding-block-start: 12rem;
-    padding-block-end: 4rem;
+    padding-block-end: 8rem;
 }
 
 .paragraph {
-    margin-block: 4rem;
-  /* max-inline-size: 65ch;
-  margin-inline: auto; */
+    margin-block: 2rem;
 }
 
 main > article:nth-of-type(1) {
-    margin-block-start: 6rem;
+    margin-block-start: 8rem;
 }
 
 /*--------------------header--------------------*/
@@ -85,13 +83,13 @@ main > article:nth-of-type(1) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-block: 2rem;
+    padding-block-start: 2rem;
 }
 
 #meta {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1rem;
 }
 
 #meta-info {
@@ -99,7 +97,7 @@ main > article:nth-of-type(1) {
     flex-direction: row;
     justify-content: inline-start;
     list-style: none;
-    gap: 4rem;
+    gap: 1rem;
 }
 
 .stacked-title {
@@ -107,7 +105,7 @@ main > article:nth-of-type(1) {
     flex-direction:column;
     align-items:flex-start;
     padding-inline:1.8rem;
-    margin-block-end: 4rem;
+    margin-block-end: 2rem;
     border-left:1.4rem solid transparent;
     border-image: linear-gradient(
     to bottom,
@@ -126,11 +124,11 @@ main > article:nth-of-type(1) {
 /*--------------------blockquote--------------------*/
 
 blockquote {
-    margin-inline-start: 15%;
+    margin-inline-start: 10%;
     margin-block: 6rem;
-    padding-inline-start: 3rem;
+    padding-inline-start: 1.2rem;
     padding-block-start: 3rem;
-    border-inline-start: 1.4rem solid;
+    border-inline-start: 0.8rem solid;
     position: relative;
 }
 
@@ -138,7 +136,7 @@ blockquote {
 blockquote::before {
     content: "“";
     position: absolute;
-    left: 3rem;
+    left: 1rem;
     top: 0;
     font-family: var(--font-blockquote);
     font-size: 4.5rem;
@@ -148,17 +146,17 @@ blockquote::before {
 
 blockquote p {
     font-family: var(--font-blockquote);
-    font-size: 3.8rem;
+    font-size: 1.4rem;
     font-weight: 600;
-    line-height: 4.6rem;
+    line-height: 2.4rem;
     margin-block: var(--spacing);
 }
 
 blockquote footer {
     margin-top: 2rem;
     font-family: var(--font-blockquote);
-    font-size: 3rem;
-    line-height: 3.8rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
 }
 
 blockquote cite {
@@ -260,12 +258,12 @@ a.blue:hover{
     position: fixed;
     right: 2rem;
     bottom: 2rem;
-    width: 120px;
-    height: 120px;
+    width: 40px;
+    height: 40px;
     display: grid;
     place-items: center;
-    font-size: 4rem;
-    line-height: 1;
+    font-size: 1.2rem;
+    line-height: 1rem;
     color: var(--white);
     background-color: var(--blue);
     border-radius: 50%;
@@ -287,7 +285,7 @@ a.blue:hover{
 
 p.drop-cap::first-letter{
     font-family: var(--font-display);
-    font-size: 6rem;
+    font-size: 2.4rem;
     font-weight: 600;
     line-height: 1;
 }
@@ -298,7 +296,7 @@ p.drop-cap::first-letter{
 
 /*--------------------response--------------------*/
 
-#response { margin-block: 10rem }
+#response { margin-block-end: 8rem }
 #response p.drop-cap::first-letter { color: var(--red); }
 
 /*--------------------footer--------------------*/
@@ -312,7 +310,119 @@ body > footer{
     background-color: var(--black);
 }
 
-body > footer p{
-    color: var(--white);
-    padding-block: 0;
+body > footer p{ color: var(--white); }
+
+
+/*--------------------media queries--------------------*/
+
+@media (min-width: 500px) {
+    p {
+        font-size: 1.1rem;
+        line-height: 2.2rem;
+    }
+    
+    h1 {
+        font-size: 5.5rem;
+        line-height: 5.2rem;
+    }
+
+    h2 {
+        font-size: 2.8rem;
+        line-height: 3.2rem;
+    }
+}
+
+@media (min-width: 600px) {
+    h1 {
+        font-size: 6.5rem;
+        line-height: 6rem;
+    }
+
+    h2 { max-inline-size: 40ch; }
+
+    /* .paragraph{ max-inline-size: 65ch; } */
+
+    /* .paragraph p{
+        max-inline-size: none;
+        margin: 0;
+    } */
+}
+
+@media (min-width: 600px){
+    .paragraph{ max-inline-size: 80ch; }
+}
+
+@media (min-width: 700px) {
+    body { padding-inline: 2rem;}
+    
+    h1 {
+        font-size: 8rem;
+        line-height: 7rem;
+    }
+
+    h2 {
+        font-size: 3.2rem;
+        line-height: 3.4rem;
+    }
+
+    blockquote p {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+        max-inline-size: 80ch;
+    }
+
+    blockquote footer {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    body > footer{ padding-inline: 2rem; }
+}
+
+@media (min-width: 1000px) {
+    body { 
+        padding-inline: 4rem;
+        padding-block-start: 2rem;
+    }
+
+    #full { min-height: 90dvh; }
+
+    h1 {
+        font-size: 11rem;
+        line-height: 10rem;
+    }
+    
+    h3 { font-size: 2rem; }
+
+    .content {
+        display: grid;
+        grid-template-columns: 2fr 4fr;
+        column-gap: 5rem;
+        align-items: start;
+    }
+
+    .content > .stacked-title{
+        position: sticky;
+        top: 2rem;
+        align-self: start;
+        height: fit-content;
+    }
+
+    blockquote {
+        margin-inline-start: 15%;
+        padding-inline-start: 1.5rem;
+    }
+
+    blockquote p {
+        font-size: 2rem;
+        line-height: 3rem;
+        max-inline-size: 100ch;
+    }
+
+    blockquote footer {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+
+    body > footer{ padding-inline: 4rem; }
 }
